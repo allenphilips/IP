@@ -10,7 +10,8 @@ cv2.imshow('dog',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-OUTPUT:![Grayscale](https://user-images.githubusercontent.com/98145104/173812852-eb93e44b-8173-49e1-9d47-96ee02db6739.png)
+OUTPUT:
+![Grayscale](https://user-images.githubusercontent.com/98145104/173812852-eb93e44b-8173-49e1-9d47-96ee02db6739.png)
 
 2.Program to display the image using matplotlib.
 
@@ -18,6 +19,9 @@ import matplotlib.image as mping
 import matplotlib.pyplot as plt
 img = mping.imread('Car.jpg')
 plt.imshow(img)
+
+OUTPUT:
+![MatPlotLib](https://user-images.githubusercontent.com/98145104/173813054-896cb84f-29ab-492c-830d-4a1eb3a86c3d.png)
 
 3.Program to perform linear transformation rotation.
 import cv2
@@ -28,7 +32,8 @@ img.show()
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-OUTPUT:![ImgRotate](https://user-images.githubusercontent.com/98145104/173812749-03040197-bc0e-44b9-a3ef-95ae5b41c649.png)
+OUTPUT:
+![ImgRotate](https://user-images.githubusercontent.com/98145104/173812749-03040197-bc0e-44b9-a3ef-95ae5b41c649.png)
 
 4.Program to convert color string to RGB color value.
 
