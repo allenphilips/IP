@@ -49,6 +49,31 @@ OUTPUT:
 ![ImgUsingColors](https://user-images.githubusercontent.com/98145104/173813593-57ca8122-da6f-4a77-814d-73e936e30bde.png)
 
 6.Program to visualize the image using various color spaces.
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+img=cv2.imread('ball.jpg')
+plt.imshow(img)
+plt.show()
+img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+plt.imshow(img)
+plt.show()
+img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
+plt.imshow(img)
+plt.show()
+OUTPUT:
+![ImgVisualization](https://user-images.githubusercontent.com/98145104/173814250-7c026e2f-3113-4914-9870-c3dd01c01d18.png)
 
 
 7.Program to display the image attributes.
+from PIL import Image
+image=Image.open('baby.jpg')
+print("Filename:", image.filename)
+print("Format:", image.format)
+print("Mode:", image.mode)
+print("Size:", image.size)
+print("Width:", image.width)
+print("Height:", image.height)
+image.close()
+OUTPUT:
+![ImgAttributes](https://user-images.githubusercontent.com/98145104/173813911-28d7b1d8-074b-486b-b144-f4636cc36b50.png)
