@@ -91,3 +91,49 @@ image.close()
 
 OUTPUT:
 ![ImgAttributes](https://user-images.githubusercontent.com/98145104/173813911-28d7b1d8-074b-486b-b144-f4636cc36b50.png)
+
+8.Program to convert original image to grayscale and binary.
+
+import cv2
+#read the image file
+img=cv2.imread('sunflower.jpg')
+cv2.imshow('RGB',img)
+cv2.waitKey(0)
+
+#Gray scale
+img=cv2.imread('sunflower.jpg',0)
+cv2.imshow('gray',img)
+cv2.waitKey(0)
+
+#Binary image
+ret, bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
+cv2.imshow('binary', bw_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+OUTPUT:
+![rgb](https://user-images.githubusercontent.com/98145104/174041532-7a56dbcf-2208-4a93-bec1-8dc51c373f62.png)
+![Grayscale](https://user-images.githubusercontent.com/98145104/174041573-f094cc0c-f80c-4004-8525-5744f6f0a146.png)
+![binary](https://user-images.githubusercontent.com/98145104/174041610-aead2ff5-c608-44be-b43f-acb1b8ab7253.png)
+
+9.Program to Resize the original image.
+
+import cv2
+
+#read the image file
+img=cv2.imread('sunflower.jpg')
+cv2.imshow('RGB',img)
+cv2.waitKey(0)
+
+#Gray scale
+img=cv2.imread('sunflower.jpg',0)
+cv2.imshow('gray',img)
+cv2.waitKey(0)
+
+#Binary image
+ret, bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
+cv2.imshow('binary', bw_img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+OUTPUT:
+![OrgIMG](https://user-images.githubusercontent.com/98145104/174042102-a5afbe04-6ad3-45bd-8b1e-5fd298da7b5e.png)
+![ResizedIMG](https://user-images.githubusercontent.com/98145104/174042157-26d460c4-d6b9-4242-83b0-cce5127f2f1e.png)
