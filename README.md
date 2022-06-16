@@ -139,6 +139,9 @@ cv2.destroyAllWindows()
 OUTPUT:
 
 ![OrgIMG](https://user-images.githubusercontent.com/98145104/174042102-a5afbe04-6ad3-45bd-8b1e-5fd298da7b5e.png)
+
 Length and Width of Original image (340, 453, 3)
+
 ![ResizedIMG](https://user-images.githubusercontent.com/98145104/174042157-26d460c4-d6b9-4242-83b0-cce5127f2f1e.png)
+
 Length and Width of Resized image (160, 150, 3)
