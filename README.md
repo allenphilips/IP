@@ -108,11 +108,13 @@ cv2.imshow('RGB',img)
 cv2.waitKey(0)
 
 #Gray scale
+
 img=cv2.imread('sunflower.jpg',0)
 cv2.imshow('gray',img)
 cv2.waitKey(0)
 
 #Binary image
+
 ret, bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
 cv2.imshow('binary', bw_img)
 cv2.waitKey(0)
@@ -127,22 +129,17 @@ OUTPUT:
 9.Program to Resize the original image.
 
 import cv2
-
-#read the image file
-img=cv2.imread('sunflower.jpg')
-cv2.imshow('RGB',img)
+img=cv2.imread('pineapple.jpg')
+print('Length and Width of Original image', img.shape)
+cv2.imshow('original image',img)
 cv2.waitKey(0)
 
-#Gray scale
-img=cv2.imread('sunflower.jpg',0)
-cv2.imshow('gray',img)
-cv2.waitKey(0)
+#to show the resized image
 
-#Binary image
-ret, bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
-cv2.imshow('binary', bw_img)
+imgresize=cv2.resize(img,(150,160))
+cv2.imshow('Resized image',imgresize)
+print('Length and Width of Resized image',imgresize.shape)
 cv2.waitKey(0)
-cv2.destroyAllWindows()
 
 OUTPUT:
 
