@@ -110,6 +110,7 @@ ret, bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
 cv2.imshow('binary', bw_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
 OUTPUT:
 ![rgb](https://user-images.githubusercontent.com/98145104/174041532-7a56dbcf-2208-4a93-bec1-8dc51c373f62.png)
 ![Grayscale](https://user-images.githubusercontent.com/98145104/174041573-f094cc0c-f80c-4004-8525-5744f6f0a146.png)
@@ -134,6 +135,7 @@ ret, bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
 cv2.imshow('binary', bw_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
 OUTPUT:
 ![OrgIMG](https://user-images.githubusercontent.com/98145104/174042102-a5afbe04-6ad3-45bd-8b1e-5fd298da7b5e.png)
 ![ResizedIMG](https://user-images.githubusercontent.com/98145104/174042157-26d460c4-d6b9-4242-83b0-cce5127f2f1e.png)
