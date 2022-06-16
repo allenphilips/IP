@@ -11,6 +11,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 OUTPUT:
+
 ![Grayscale](https://user-images.githubusercontent.com/98145104/173812852-eb93e44b-8173-49e1-9d47-96ee02db6739.png)
 
 2.Program to display the image using matplotlib.
@@ -21,6 +22,7 @@ img = mping.imread('Car.jpg')
 plt.imshow(img)
 
 OUTPUT:
+
 ![MatPlotLib](https://user-images.githubusercontent.com/98145104/173813054-896cb84f-29ab-492c-830d-4a1eb3a86c3d.png)
 
 3.Program to perform linear transformation rotation.
@@ -34,6 +36,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 OUTPUT:
+
 ![ImgRotate](https://user-images.githubusercontent.com/98145104/173812749-03040197-bc0e-44b9-a3ef-95ae5b41c649.png)
 
 4.Program to convert color string to RGB color value.
@@ -47,6 +50,7 @@ img2=ImageColor.getrgb("red")
 print(img2)
 
 OUTPUT:
+
 ![ColorToRGBvalues](https://user-images.githubusercontent.com/98145104/173813395-f006c078-0353-4d09-a93e-7ce48aeb2854.png)
 
 5.Program to create image using colors.
@@ -56,6 +60,7 @@ img=Image.new('RGB',(200,400),(255,255,0))
 img.show()
 
 OUTPUT:
+
 ![ImgUsingColors](https://user-images.githubusercontent.com/98145104/173813593-57ca8122-da6f-4a77-814d-73e936e30bde.png)
 
 6.Program to visualize the image using various color spaces.
@@ -74,6 +79,7 @@ plt.imshow(img)
 plt.show()
 
 OUTPUT:
+
 ![ImgVisualization](https://user-images.githubusercontent.com/98145104/173814250-7c026e2f-3113-4914-9870-c3dd01c01d18.png)
 
 
@@ -90,6 +96,7 @@ print("Height:", image.height)
 image.close()
 
 OUTPUT:
+
 ![ImgAttributes](https://user-images.githubusercontent.com/98145104/173813911-28d7b1d8-074b-486b-b144-f4636cc36b50.png)
 
 8.Program to convert original image to grayscale and binary.
@@ -112,6 +119,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 OUTPUT:
+
 ![rgb](https://user-images.githubusercontent.com/98145104/174041532-7a56dbcf-2208-4a93-bec1-8dc51c373f62.png)
 ![Grayscale](https://user-images.githubusercontent.com/98145104/174041573-f094cc0c-f80c-4004-8525-5744f6f0a146.png)
 ![binary](https://user-images.githubusercontent.com/98145104/174041610-aead2ff5-c608-44be-b43f-acb1b8ab7253.png)
