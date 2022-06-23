@@ -168,57 +168,57 @@ OUTPUT:
 
 11.Masking and Blurring:
 
-import cv2
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
-img=mping.imread('Orangef.jpg')
-plt.imshow(img)
-plt.show()
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img=mping.imread('Orangef.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
 
 OUTPUT:
 ![Msk1](https://user-images.githubusercontent.com/98145104/175020316-23497261-1437-438c-8133-0e01451d77bc.png)
 
-hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
-light_orange=(1,190,200)
-dark_orange=(18,255,255)
-mask=cv2.inRange(hsv_img, light_green, dark_green)
-result=cv2.bitwise_and(img ,img, mask=mask)
-plt.subplot(1,2,1)
-plt.imshow(mask,cmap='gray')
-plt.subplot(1,2,2)
-plt.imshow(result)
-plt.show()
+hsv_img=cv2.cvtColor(img, cv2.COLOR_RGB2HSV)<br>
+light_orange=(1,190,200)<br>
+dark_orange=(18,255,255)<br>
+mask=cv2.inRange(hsv_img, light_green, dark_green)<br>
+result=cv2.bitwise_and(img ,img, mask=mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask,cmap='gray')<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result)<br>
+plt.show()<br>
 
 OUTPUT:
 ![Msk2](https://user-images.githubusercontent.com/98145104/175020519-9b50e9e4-ee9c-4fdc-b3af-4cb76fc6be78.png)
 
-light_white=(0,0,200)
-dark_white=(145,60,255)
-mask_white=cv2.inRange(hsv_img, light_white, dark_white)
-result_white=cv2.bitwise_and(img, img, mask=mask_white)
-plt.subplot(1,2,1)
-plt.imshow(mask_white, cmap='gray')
-plt.subplot(1,2,2)
-plt.imshow(result_white)
-plt.show()
+light_white=(0,0,200)<br>
+dark_white=(145,60,255)<br>
+mask_white=cv2.inRange(hsv_img, light_white, dark_white)<br>
+result_white=cv2.bitwise_and(img, img, mask=mask_white)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(mask_white, cmap='gray')<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(result_white)<br>
+plt.show()<br>
 
 OUTPUT:
 ![Msk3](https://user-images.githubusercontent.com/98145104/175020627-d9aca11e-3bc7-4d0a-b90f-74e01fc71741.png)
 
-final_mask = mask + mask_white
-final_result = cv2.bitwise_and(img, img, mask=final_mask)
-plt.subplot(1,2,1)
-plt.imshow(final_mask, cmap='gray')
-plt.subplot(1,2,2)
-plt.imshow(final_result)
-plt.show()
+final_mask = mask + mask_white<br>
+final_result = cv2.bitwise_and(img, img, mask=final_mask)<br>
+plt.subplot(1,2,1)<br>
+plt.imshow(final_mask, cmap='gray')<br>
+plt.subplot(1,2,2)<br>
+plt.imshow(final_result)<br>
+plt.show()<br>
 
 OUTPUT:
 ![Msk4](https://user-images.githubusercontent.com/98145104/175020691-e09ca9d8-4a52-44f1-a20c-801ad12b5446.png)
 
-blur = cv2.GaussianBlur(final_result, (7,7),0)
-plt.imshow(blur)
-plt.show()
+blur = cv2.GaussianBlur(final_result, (7,7),0)<br>
+plt.imshow(blur)<br>
+plt.show()<br>
 
 OUTPUT:
 ![Msk5](https://user-images.githubusercontent.com/98145104/175020753-75219b01-62ab-49bf-8210-c4f11e2520d3.png)
