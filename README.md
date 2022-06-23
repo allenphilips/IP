@@ -159,7 +159,7 @@ start:
 <br>
 from skimage import io<br>
 import matplotlib.pyplot as plt<br>
-url='https://th.bing.com/th/id/OIP.qVuoApbCGfaPbNRSX8SmIwHaGA?w=213&h=180&c=7&r=0&o=5&pid=1.7.jpg'
+url='https://th.bing.com/th/id/OIP.qVuoApbCGfaPbNRSX8SmIwHaGA?w=213&h=180&c=7&r=0&o=5&pid=1.7.jpg'<br>
 image=io.imread(url)<br>
 plt.imshow(image)<br>
 plt.show()<br>
