@@ -4,11 +4,11 @@ http://localhost:8889/tree/ImgProcessing_Sample%20-%20AllenPhilips
 
 # 1.Program to display grayscale image using read and write operation.
 
-import cv2 
-img=cv2.imread('dog.jpg',0)
-cv2.imshow('dog',img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+import cv2<br>
+img=cv2.imread('dog.jpg',0)<br>
+cv2.imshow('dog',img)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
 
 OUTPUT:
 
@@ -16,10 +16,10 @@ OUTPUT:
 
 # 2.Program to display the image using matplotlib.
 
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
-img = mping.imread('Car.jpg')
-plt.imshow(img)
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
+img = mping.imread('Car.jpg')<br>
+plt.imshow(img)<br>
 
 OUTPUT:
 
@@ -27,13 +27,13 @@ OUTPUT:
 
 # 3.Program to perform linear transformation rotation.
 
-import cv2
-from PIL import Image
-img=Image.open("vase.jpg")
-img=img.rotate(180)
-img.show()
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+import cv2<br>
+from PIL import Image<br>
+img=Image.open("vase.jpg")<br>
+img=img.rotate(180)<br>
+img.show()<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
 
 OUTPUT:
 
@@ -41,13 +41,13 @@ OUTPUT:
 
 # 4.Program to convert color string to RGB color value.
 
-from PIL import ImageColor
-#using getrgb for yellow
-img1=ImageColor.getrgb("yellow")
-print(img1)
-#using getrgb for red
-img2=ImageColor.getrgb("red")
-print(img2)
+from PIL import ImageColor<br>
+#using getrgb for yellow<br>
+img1=ImageColor.getrgb("yellow")<br>
+print(img1)<br>
+#using getrgb for red<br>
+img2=ImageColor.getrgb("red")<br>
+print(img2)<br>
 
 OUTPUT:
 
@@ -55,9 +55,9 @@ OUTPUT:
 
 # 5.Program to create image using colors.
 
-from PIL import Image 
-img=Image.new('RGB',(200,400),(255,255,0))
-img.show()
+from PIL import Image <br>
+img=Image.new('RGB',(200,400),(255,255,0))<br>
+img.show()<br>
 
 OUTPUT:
 
@@ -65,18 +65,18 @@ OUTPUT:
 
 # 6.Program to visualize the image using various color spaces.
 
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-img=cv2.imread('ball.jpg')
-plt.imshow(img)
-plt.show()
-img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-plt.imshow(img)
-plt.show()
-img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)
-plt.imshow(img)
-plt.show()
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+import numpy as np<br>
+img=cv2.imread('ball.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)<br>
+plt.imshow(img)<br>
+plt.show()<br>
+img=cv2.cvtColor(img,cv2.COLOR_RGB2HSV)<br>
+plt.imshow(img)<br>
+plt.show()<br>
 
 OUTPUT:
 
@@ -85,15 +85,15 @@ OUTPUT:
 
 # 7.Program to display the image attributes.
 
-from PIL import Image
-image=Image.open('baby.jpg')
-print("Filename:", image.filename)
-print("Format:", image.format)
-print("Mode:", image.mode)
-print("Size:", image.size)
-print("Width:", image.width)
-print("Height:", image.height)
-image.close()
+from PIL import Image<br>
+image=Image.open('baby.jpg')<br>
+print("Filename:", image.filename)<br>
+print("Format:", image.format)<br>
+print("Mode:", image.mode)<br>
+print("Size:", image.size)<br>
+print("Width:", image.width)<br>
+print("Height:", image.height)<br>
+image.close()<br>
 
 OUTPUT:
 
@@ -101,24 +101,24 @@ OUTPUT:
 
 # 8.Program to convert original image to grayscale and binary.
 
-import cv2
-#read the image file
-img=cv2.imread('sunflower.jpg')
-cv2.imshow('RGB',img)
-cv2.waitKey(0)
+import cv2<br>
+#read the image file<br>
+img=cv2.imread('sunflower.jpg')<br>
+cv2.imshow('RGB',img)<br>
+cv2.waitKey(0)<br>
 
 #Gray scale
 
-img=cv2.imread('sunflower.jpg',0)
-cv2.imshow('gray',img)
-cv2.waitKey(0)
+img=cv2.imread('sunflower.jpg',0)<br>
+cv2.imshow('gray',img)<br>
+cv2.waitKey(0)<br>
 
 #Binary image
 
-ret, bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)
-cv2.imshow('binary', bw_img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+ret, bw_img=cv2.threshold(img,127,255,cv2.THRESH_BINARY)<br>
+cv2.imshow('binary', bw_img)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
 
 OUTPUT:
 
@@ -224,68 +224,68 @@ OUTPUT:
 ![Msk5](https://user-images.githubusercontent.com/98145104/175020753-75219b01-62ab-49bf-8210-c4f11e2520d3.png)
 
 # 12.program to perform arithmatic operations on images.
-import cv2
-import matplotlib.image as mping
-import matplotlib.pyplot as plt
+import cv2<br>
+import matplotlib.image as mping<br>
+import matplotlib.pyplot as plt<br>
 
-#Reading image files
-img1 = cv2.imread('Car.jpg')
-img2 = cv2.imread('Car1.jpg')
+#Reading image files<br>
+img1 = cv2.imread('Car.jpg')<br>
+img2 = cv2.imread('Car1.jpg')<br>
 
-#Applying Numpy addition on images
-fimg1 = img1 + img2
-plt.imshow(fimg1)
-plt.show()
+#Applying Numpy addition on images<br>
+fimg1 = img1 + img2<br>
+plt.imshow(fimg1)<br>
+plt.show()<br>
 
 OUTPUT:
 ![Arith1](https://user-images.githubusercontent.com/98145104/175261389-c0b0a56f-70d2-46b7-81a1-33554053f777.png)
 
-#Saving the output image
-cv2.imwrite('output.jpg', fimg1)
-fimg2 = img1 - img2
-plt.imshow(fimg2)
-plt.show()
+#Saving the output image<br>
+cv2.imwrite('output.jpg', fimg1)<br>
+fimg2 = img1 - img2<br>
+plt.imshow(fimg2)<br>
+plt.show()<br>
 
 OUTPUT:
 ![Arith2](https://user-images.githubusercontent.com/98145104/175261566-dde86874-29f8-46ff-ba1f-01c61e7370ae.png)
 
-#Saving the output image
-cv2.imwrite('output.jpg', fimg2)
-fimg3 = img1 * img2
-plt.imshow(fimg3)
-plt.show()
+#Saving the output image<br>
+cv2.imwrite('output.jpg', fimg2)<br>
+fimg3 = img1 * img2<br>
+plt.imshow(fimg3)<br>
+plt.show()<br>
 
 OUTPUT:
 ![Arith3](https://user-images.githubusercontent.com/98145104/175262138-4241d2f9-b285-41fb-89dd-ccbe1f48ff92.png)
 
-#Saving the output image
-cv2.imwrite('output.jpg', fimg3)
-fimg4 = img1 / img2
-plt.imshow(fimg4)
-plt.show()
+#Saving the output image<br>
+cv2.imwrite('output.jpg', fimg3)<br>
+fimg4 = img1 / img2<br>
+plt.imshow(fimg4)<br>
+plt.show()<br>
 
-#Saving the output image
-cv2.imwrite('output.jpg', fimg4)
+#Saving the output image<br>
+cv2.imwrite('output.jpg', fimg4)<br>
 
 OUTPUT:
 ![Arith4](https://user-images.githubusercontent.com/98145104/175262202-5cf609ad-c8dd-4ff9-bbbd-cd433bd06e3e.png)
 
 # 13.Program to change the image to different color spaces.
 
-import cv2
-img = cv2.imread('D:\\img.jpg')
-gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
-lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
-hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
-yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
-cv2.imshow("GRAY image", gray)
-cv2.imshow("HSV image",hsv)
-cv2.imshow("LAB image",lab)
-cv2.imshow("HLS image", hls)
-cv2.imshow("YUV image",yuv)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+import cv2<br>
+img = cv2.imread('D:\\img.jpg')<br>
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)<br>
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)<br>
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)<br>
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)<br>
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)<br>
+cv2.imshow("GRAY image", gray)<br>
+cv2.imshow("HSV image",hsv)<br>
+cv2.imshow("LAB image",lab)<br>
+cv2.imshow("HLS image", hls)<br>
+cv2.imshow("YUV image",yuv)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
 
 OUTPUT:
 ![Gray](https://user-images.githubusercontent.com/98145104/175279385-b0124626-1674-4676-b879-ff4d371d072c.png)
@@ -296,15 +296,15 @@ OUTPUT:
 
 # 14.Program to create an image using 2D array.
 
-import cv2 as c
-import numpy as np
-from PIL import Image
-array = np.zeros([100,200,3], dtype = np.uint8)
-array[:,:100] = [255,130,0]
-array[:,100:] = [0,0,255]
-img = Image.fromarray(array)
-img.save('image1.png')
-img.show()
-c.waitKey(0)
+import cv2 as c<br>
+import numpy as np<br>
+from PIL import Image<br>
+array = np.zeros([100,200,3], dtype = np.uint8)<br>
+array[:,:100] = [255,130,0]<br>
+array[:,100:] = [0,0,255]<br>
+img = Image.fromarray(array)<br>
+img.save('image1.png')<br>
+img.show()<br>
+c.waitKey(0)<br>
 
 OUTPUT:![2D](https://user-images.githubusercontent.com/98145104/175268327-7a2e9d59-60a9-4fdb-8039-1bd29e06b282.png)
