@@ -151,7 +151,7 @@ Length and Width of Original image (340, 453, 3)
 
 Length and Width of Resized image (160, 150, 3)
 
-10. URL
+10.Develop a program to readimage using URL.
 pip install Scikit-Learn<br>
 import skimage<br>
 print(skimage.__version__)<br>
@@ -166,7 +166,7 @@ plt.show()<br>
 OUTPUT:
 ![URL](https://user-images.githubusercontent.com/98145104/175019845-d3b5671a-dc63-4e8c-9c50-fd807167b944.png)
 
-11.Masking and Blurring:
+11.Program to mask and blur the image.
 
 import cv2<br>
 import matplotlib.image as mping<br>
