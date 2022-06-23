@@ -222,3 +222,50 @@ plt.show()<br>
 
 OUTPUT:
 ![Msk5](https://user-images.githubusercontent.com/98145104/175020753-75219b01-62ab-49bf-8210-c4f11e2520d3.png)
+
+12.program to perform arithmatic operations on images.
+import cv2
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+
+# Reading image files
+img1 = cv2.imread('Car.jpg')
+img2 = cv2.imread('Car1.jpg')
+
+# Applying Numpy addition on images
+fimg1 = img1 + img2
+plt.imshow(fimg1)
+plt.show()
+
+OUTPUT:
+![Arith1](https://user-images.githubusercontent.com/98145104/175261389-c0b0a56f-70d2-46b7-81a1-33554053f777.png)
+
+#Saving the output image
+cv2.imwrite('output.jpg', fimg1)
+fimg2 = img1 - img2
+plt.imshow(fimg2)
+plt.show()
+
+OUTPUT:
+![Arith2](https://user-images.githubusercontent.com/98145104/175261566-dde86874-29f8-46ff-ba1f-01c61e7370ae.png)
+
+# Saving the output image
+cv2.imwrite('output.jpg', fimg2)
+fimg3 = img1 * img2
+plt.imshow(fimg3)
+plt.show()
+
+OUTPUT:
+![Arith3](https://user-images.githubusercontent.com/98145104/175262138-4241d2f9-b285-41fb-89dd-ccbe1f48ff92.png)
+
+# Saving the output image
+cv2.imwrite('output.jpg', fimg3)
+fimg4 = img1 / img2
+plt.imshow(fimg4)
+plt.show()
+
+# Saving the output image
+cv2.imwrite('output.jpg', fimg4)
+
+OUTPUT:
+![Arith4](https://user-images.githubusercontent.com/98145104/175262202-5cf609ad-c8dd-4ff9-bbbd-cd433bd06e3e.png)
