@@ -128,17 +128,17 @@ OUTPUT:
 
 9.Program to Resize the original image.
 
-import cv2
-img=cv2.imread('pineapple.jpg')
-print('Length and Width of Original image', img.shape)
-cv2.imshow('original image',img)
-cv2.waitKey(0)
+import cv2<br>
+img=cv2.imread('pineapple.jpg')<br>
+print('Length and Width of Original image', img.shape)<br>
+cv2.imshow('original image',img)<br>
+cv2.waitKey(0)<br>
 
 #to show the resized image
 
-imgresize=cv2.resize(img,(150,160))
-cv2.imshow('Resized image',imgresize)
-print('Length and Width of Resized image',imgresize.shape)
+imgresize=cv2.resize(img,(150,160))<br>
+cv2.imshow('Resized image',imgresize)<br>
+print('Length and Width of Resized image',imgresize.shape)<br>
 cv2.waitKey(0)
 
 OUTPUT:
@@ -152,17 +152,17 @@ Length and Width of Original image (340, 453, 3)
 Length and Width of Resized image (160, 150, 3)
 
 10. URL
-pip install Scikit-Learn
-import skimage
-print(skimage.__version__)
+pip install Scikit-Learn<br>
+import skimage<br>
+print(skimage.__version__)<br>
 start:
-
-from skimage import io
-import matplotlib.pyplot as plt
-url='https://th.bing.com/th/id/OIP.qVuoApbCGfaPbNRSX8SmIwHaGA?w=213&h=180&c=7&r=0&o=5&pid=1.7.jpg'
-image=io.imread(url)
-plt.imshow(image)
-plt.show()
+<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+url='https://th.bing.com/th/id/OIP.qVuoApbCGfaPbNRSX8SmIwHaGA?w=213&h=180&c=7&r=0&o=5&pid=1.7.jpg'<br>
+image=io.imread(url)<br>
+plt.imshow(image)<br>
+plt.show()<br>
 OUTPUT:
 ![URL](https://user-images.githubusercontent.com/98145104/175019845-d3b5671a-dc63-4e8c-9c50-fd807167b944.png)
 
