@@ -269,3 +269,22 @@ cv2.imwrite('output.jpg', fimg4)
 
 OUTPUT:
 ![Arith4](https://user-images.githubusercontent.com/98145104/175262202-5cf609ad-c8dd-4ff9-bbbd-cd433bd06e3e.png)
+
+13.Program to change the image to different color spaces.
+
+OUTPUT:
+
+14.Program to create an image using 2D array.
+
+import cv2 as c
+import numpy as np
+from PIL import Image
+array = np.zeros([100,200,3], dtype = np.uint8)
+array[:,:100] = [255,130,0]
+array[:,100:] = [0,0,255]
+img = Image.fromarray(array)
+img.save('image1.png')
+img.show()
+c.waitKey(0)
+
+OUTPUT:![2D](https://user-images.githubusercontent.com/98145104/175268327-7a2e9d59-60a9-4fdb-8039-1bd29e06b282.png)
