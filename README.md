@@ -2,7 +2,7 @@
 SAMPLE-Progs
 http://localhost:8889/tree/ImgProcessing_Sample%20-%20AllenPhilips
 
-1.Program to display grayscale image using read and write operation.
+#1.Program to display grayscale image using read and write operation.
 
 import cv2 
 img=cv2.imread('dog.jpg',0)
@@ -14,7 +14,7 @@ OUTPUT:
 
 ![Grayscale](https://user-images.githubusercontent.com/98145104/173812852-eb93e44b-8173-49e1-9d47-96ee02db6739.png)
 
-2.Program to display the image using matplotlib.
+#2.Program to display the image using matplotlib.
 
 import matplotlib.image as mping
 import matplotlib.pyplot as plt
@@ -25,7 +25,7 @@ OUTPUT:
 
 ![MatPlotLib](https://user-images.githubusercontent.com/98145104/173813054-896cb84f-29ab-492c-830d-4a1eb3a86c3d.png)
 
-3.Program to perform linear transformation rotation.
+#3.Program to perform linear transformation rotation.
 
 import cv2
 from PIL import Image
@@ -39,7 +39,7 @@ OUTPUT:
 
 ![ImgRotate](https://user-images.githubusercontent.com/98145104/173812749-03040197-bc0e-44b9-a3ef-95ae5b41c649.png)
 
-4.Program to convert color string to RGB color value.
+#4.Program to convert color string to RGB color value.
 
 from PIL import ImageColor
 #using getrgb for yellow
@@ -53,7 +53,7 @@ OUTPUT:
 
 ![ColorToRGBvalues](https://user-images.githubusercontent.com/98145104/173813395-f006c078-0353-4d09-a93e-7ce48aeb2854.png)
 
-5.Program to create image using colors.
+#5.Program to create image using colors.
 
 from PIL import Image 
 img=Image.new('RGB',(200,400),(255,255,0))
@@ -63,7 +63,7 @@ OUTPUT:
 
 ![ImgUsingColors](https://user-images.githubusercontent.com/98145104/173813593-57ca8122-da6f-4a77-814d-73e936e30bde.png)
 
-6.Program to visualize the image using various color spaces.
+#6.Program to visualize the image using various color spaces.
 
 import cv2
 import matplotlib.pyplot as plt
@@ -83,7 +83,7 @@ OUTPUT:
 ![ImgVisualization](https://user-images.githubusercontent.com/98145104/173814250-7c026e2f-3113-4914-9870-c3dd01c01d18.png)
 
 
-7.Program to display the image attributes.
+#7.Program to display the image attributes.
 
 from PIL import Image
 image=Image.open('baby.jpg')
@@ -99,7 +99,7 @@ OUTPUT:
 
 ![ImgAttributes](https://user-images.githubusercontent.com/98145104/173813911-28d7b1d8-074b-486b-b144-f4636cc36b50.png)
 
-8.Program to convert original image to grayscale and binary.
+#8.Program to convert original image to grayscale and binary.
 
 import cv2
 #read the image file
@@ -126,7 +126,7 @@ OUTPUT:
 ![Grayscale](https://user-images.githubusercontent.com/98145104/174041573-f094cc0c-f80c-4004-8525-5744f6f0a146.png)
 ![binary](https://user-images.githubusercontent.com/98145104/174041610-aead2ff5-c608-44be-b43f-acb1b8ab7253.png)
 
-9.Program to Resize the original image.
+#9.Program to Resize the original image.
 
 import cv2<br>
 img=cv2.imread('pineapple.jpg')<br>
@@ -151,7 +151,7 @@ Length and Width of Original image (340, 453, 3)
 
 Length and Width of Resized image (160, 150, 3)
 
-10.Develop a program to readimage using URL.
+#10.Develop a program to readimage using URL.
 pip install Scikit-Learn<br>
 import skimage<br>
 print(skimage.__version__)<br>
@@ -166,7 +166,7 @@ plt.show()<br>
 OUTPUT:
 ![URL](https://user-images.githubusercontent.com/98145104/175019845-d3b5671a-dc63-4e8c-9c50-fd807167b944.png)
 
-11.Program to mask and blur the image.
+#11.Program to mask and blur the image.
 
 import cv2<br>
 import matplotlib.image as mping<br>
@@ -223,16 +223,16 @@ plt.show()<br>
 OUTPUT:
 ![Msk5](https://user-images.githubusercontent.com/98145104/175020753-75219b01-62ab-49bf-8210-c4f11e2520d3.png)
 
-12.program to perform arithmatic operations on images.
+#12.program to perform arithmatic operations on images.
 import cv2
 import matplotlib.image as mping
 import matplotlib.pyplot as plt
 
-# Reading image files
+// Reading image files
 img1 = cv2.imread('Car.jpg')
 img2 = cv2.imread('Car1.jpg')
 
-# Applying Numpy addition on images
+// Applying Numpy addition on images
 fimg1 = img1 + img2
 plt.imshow(fimg1)
 plt.show()
@@ -270,7 +270,7 @@ cv2.imwrite('output.jpg', fimg4)
 OUTPUT:
 ![Arith4](https://user-images.githubusercontent.com/98145104/175262202-5cf609ad-c8dd-4ff9-bbbd-cd433bd06e3e.png)
 
-13.Program to change the image to different color spaces.
+#13.Program to change the image to different color spaces.
 
 import cv2
 img = cv2.imread('D:\\img.jpg')
@@ -294,8 +294,7 @@ OUTPUT:
 ![HLS](https://user-images.githubusercontent.com/98145104/175279520-ad740d11-c093-4a24-a60d-2d88811068b1.png)
 ![YUV](https://user-images.githubusercontent.com/98145104/175279538-0de4b362-03d6-4fcb-acd4-c503d6d36c61.png)
 
-
-14.Program to create an image using 2D array.
+#14.Program to create an image using 2D array.
 
 import cv2 as c
 import numpy as np
