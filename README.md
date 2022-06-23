@@ -272,7 +272,28 @@ OUTPUT:
 
 13.Program to change the image to different color spaces.
 
+import cv2
+img = cv2.imread('D:\\img.jpg')
+gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV)
+lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB)
+hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS)
+yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
+cv2.imshow("GRAY image", gray)
+cv2.imshow("HSV image",hsv)
+cv2.imshow("LAB image",lab)
+cv2.imshow("HLS image", hls)
+cv2.imshow("YUV image",yuv)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
 OUTPUT:
+![Gray](https://user-images.githubusercontent.com/98145104/175279385-b0124626-1674-4676-b879-ff4d371d072c.png)
+![HSV](https://user-images.githubusercontent.com/98145104/175279426-29f54544-831e-4121-a85e-ff444cc3986e.png)
+![LAB](https://user-images.githubusercontent.com/98145104/175279456-9f01e5ff-ccfa-4d16-88f2-03ff73c6b7d4.png)
+![HLS](https://user-images.githubusercontent.com/98145104/175279520-ad740d11-c093-4a24-a60d-2d88811068b1.png)
+![YUV](https://user-images.githubusercontent.com/98145104/175279538-0de4b362-03d6-4fcb-acd4-c503d6d36c61.png)
+
 
 14.Program to create an image using 2D array.
 
