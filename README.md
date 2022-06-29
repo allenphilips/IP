@@ -421,3 +421,4 @@ plt.imshow(gradient)
 cv2.waitKey(0)
 
 OUTPUT:
+![Enhance2](https://user-images.githubusercontent.com/98145104/176427041-69e01e67-d77a-4374-8330-e80cee6865ce.png)
