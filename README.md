@@ -308,3 +308,90 @@ img.show()<br>
 c.waitKey(0)<br>
 
 OUTPUT:![2D](https://user-images.githubusercontent.com/98145104/175268327-7a2e9d59-60a9-4fdb-8039-1bd29e06b282.png)
+
+# 15.
+
+import cv2
+import matplotlib.pyplot as plt
+image1=cv2.imread('bird1.jpg')
+image2=cv2.imread('bird1.jpg')
+ax=plt.subplots(figsize=(15,10))
+bitwiseAnd  = cv2.bitwise_and(image1,image2)
+bitwiseOr   = cv2.bitwise_or(image1,image2)
+bitwiseXor  = cv2.bitwise_xor(image1,image2)
+bitwiseNot_img1 = cv2.bitwise_not(image1)
+bitwiseNot_img2 = cv2.bitwise_not(image2)
+plt.subplot(151)
+plt.imshow(bitwiseAnd)
+plt.subplot(152)
+plt.imshow(bitwiseOr)
+plt.subplot(153)
+plt.imshow(bitwiseXor)
+plt.subplot(154)
+plt.imshow(bitwiseNot_img1)
+plt.subplot(155)
+plt.imshow(bitwiseNot_img2)
+cv2.waitKey(0)
+
+OUTPUT:![Bitwise](https://user-images.githubusercontent.com/98145104/176425447-f6bff98a-4992-4abc-b7cd-2a21a6d8987e.png)
+
+# 16. 
+import cv2
+import numpy as np
+image = cv2.imread('glass1.jpg')
+cv2.imshow('Original Image', image)
+cv2.waitKey(0)
+
+Gaussian = cv2.GaussianBlur(image, (7, 7),0)
+cv2.imshow('Gaussian Blurring', Gaussian)
+cv2.waitKey(0)
+
+median = cv2.medianBlur(image, 5)
+cv2.imshow('Median Blurring', median)
+cv2.waitKey(0)
+
+bilateral = cv2.bilateralFilter(image, 9, 75, 75)
+cv2.imshow('Bilateral Blurring', bilateral)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+OUTPUT:
+![Blur1](https://user-images.githubusercontent.com/98145104/176425864-30afa493-aafa-4aad-877d-adc4aedf783b.png)
+![Blur2](https://user-images.githubusercontent.com/98145104/176425891-e960c7c0-ade4-447e-94a6-f7149ca0c305.png)
+![Blur3](https://user-images.githubusercontent.com/98145104/176425906-a2a3ee45-1a2b-4695-96c1-0251f46752d0.png)
+![Blur4](https://user-images.githubusercontent.com/98145104/176425922-86ef55d4-c240-431e-acd6-81d5b1d7ab16.png)
+
+# 17.
+from PIL import Image
+from PIL import ImageEnhance
+image = Image.open('bird2.jpg')
+image.show()
+
+#Brightness
+enh_bri = ImageEnhance.Brightness(image)
+brightness = 1.5
+image_brightened = enh_bri.enhance(brightness)
+image_brightened.show()
+
+#Color
+enh_col = ImageEnhance.Color(image)
+color = 1.5
+image_colored = enh_col.enhance(color)
+image_colored.show()
+
+#Contrast
+enh_con = ImageEnhance.Contrast(image)
+contrast = 1.5
+image_contrasted = enh_con.enhance(contrast)
+image_contrasted.show()
+
+#Sharpen
+enh_sha = ImageEnhance.Sharpness(image)
+sharpness = 1.5
+image_sharped = enh_sha.enhance(sharpness)
+image_sharped.show()
+
+OUTPUT:
+![IMGenhance](https://user-images.githubusercontent.com/98145104/176426602-d4218919-580a-4356-9e1b-c344564be4ba.png)
+![IMG_enhance](https://user-images.githubusercontent.com/98145104/176426616-b5458d09-721d-4ab7-b036-09cf8c8e2a15.png)
+
