@@ -309,7 +309,7 @@ c.waitKey(0)<br>
 
 OUTPUT:![2D](https://user-images.githubusercontent.com/98145104/175268327-7a2e9d59-60a9-4fdb-8039-1bd29e06b282.png)
 
-# 15.
+# 15.Program to perform bitwise operations on an image.
 
 import cv2<br>
 import matplotlib.pyplot as plt<br>
@@ -335,7 +335,7 @@ cv2.waitKey(0)<br>
 
 OUTPUT:![Bitwise](https://user-images.githubusercontent.com/98145104/176425447-f6bff98a-4992-4abc-b7cd-2a21a6d8987e.png)
 
-# 16. 
+# 16.Program to perform blur operations.
 import cv2<br>
 import numpy as np<br>
 image = cv2.imread('glass1.jpg')<br>
@@ -361,7 +361,7 @@ OUTPUT:
 ![Blur3](https://user-images.githubusercontent.com/98145104/176425906-a2a3ee45-1a2b-4695-96c1-0251f46752d0.png)
 ![Blur4](https://user-images.githubusercontent.com/98145104/176425922-86ef55d4-c240-431e-acd6-81d5b1d7ab16.png)
 
-# 17.
+# 17.Program to enhance an image.
 from PIL import Image<br>
 from PIL import ImageEnhance<br>
 image = Image.open('bird2.jpg')<br>
@@ -395,7 +395,7 @@ OUTPUT:
 ![IMGenhance](https://user-images.githubusercontent.com/98145104/176426602-d4218919-580a-4356-9e1b-c344564be4ba.png)
 ![IMG_enhance](https://user-images.githubusercontent.com/98145104/176426616-b5458d09-721d-4ab7-b036-09cf8c8e2a15.png)
 
-# 18.
+# 18.Program to enhance an image.
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
