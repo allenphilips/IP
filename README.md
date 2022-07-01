@@ -395,7 +395,7 @@ OUTPUT:
 ![IMGenhance](https://user-images.githubusercontent.com/98145104/176426602-d4218919-580a-4356-9e1b-c344564be4ba.png)
 ![IMG_enhance](https://user-images.githubusercontent.com/98145104/176426616-b5458d09-721d-4ab7-b036-09cf8c8e2a15.png)
 
-# 18.Program to enhance an image.
+# 18.Program to morph an image.
 import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
