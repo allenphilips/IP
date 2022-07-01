@@ -311,49 +311,49 @@ OUTPUT:![2D](https://user-images.githubusercontent.com/98145104/175268327-7a2e9d
 
 # 15.
 
-import cv2
-import matplotlib.pyplot as plt
-image1=cv2.imread('bird1.jpg')
-image2=cv2.imread('bird1.jpg')
-ax=plt.subplots(figsize=(15,10))
-bitwiseAnd  = cv2.bitwise_and(image1,image2)
-bitwiseOr   = cv2.bitwise_or(image1,image2)
-bitwiseXor  = cv2.bitwise_xor(image1,image2)
-bitwiseNot_img1 = cv2.bitwise_not(image1)
-bitwiseNot_img2 = cv2.bitwise_not(image2)
-plt.subplot(151)
-plt.imshow(bitwiseAnd)
-plt.subplot(152)
-plt.imshow(bitwiseOr)
-plt.subplot(153)
-plt.imshow(bitwiseXor)
-plt.subplot(154)
-plt.imshow(bitwiseNot_img1)
-plt.subplot(155)
-plt.imshow(bitwiseNot_img2)
-cv2.waitKey(0)
+import cv2<br>
+import matplotlib.pyplot as plt<br>
+image1=cv2.imread('bird1.jpg')<br>
+image2=cv2.imread('bird1.jpg')<br>
+ax=plt.subplots(figsize=(15,10))<br>
+bitwiseAnd  = cv2.bitwise_and(image1,image2)<br>
+bitwiseOr   = cv2.bitwise_or(image1,image2)<br>
+bitwiseXor  = cv2.bitwise_xor(image1,image2)<br>
+bitwiseNot_img1 = cv2.bitwise_not(image1)<br>
+bitwiseNot_img2 = cv2.bitwise_not(image2)<br>
+plt.subplot(151)<br>
+plt.imshow(bitwiseAnd)<br>
+plt.subplot(152)<br>
+plt.imshow(bitwiseOr)<br>
+plt.subplot(153)<br>
+plt.imshow(bitwiseXor)<br>
+plt.subplot(154)<br>
+plt.imshow(bitwiseNot_img1)<br>
+plt.subplot(155)<br>
+plt.imshow(bitwiseNot_img2)<br>
+cv2.waitKey(0)<br>
 
 OUTPUT:![Bitwise](https://user-images.githubusercontent.com/98145104/176425447-f6bff98a-4992-4abc-b7cd-2a21a6d8987e.png)
 
 # 16. 
-import cv2
-import numpy as np
-image = cv2.imread('glass1.jpg')
-cv2.imshow('Original Image', image)
-cv2.waitKey(0)
+import cv2<br>
+import numpy as np<br>
+image = cv2.imread('glass1.jpg')<br>
+cv2.imshow('Original Image', image)<br>
+cv2.waitKey(0)<br>
 
-Gaussian = cv2.GaussianBlur(image, (7, 7),0)
-cv2.imshow('Gaussian Blurring', Gaussian)
-cv2.waitKey(0)
+Gaussian = cv2.GaussianBlur(image, (7, 7),0)<br>
+cv2.imshow('Gaussian Blurring', Gaussian)<br>
+cv2.waitKey(0)<br>
 
-median = cv2.medianBlur(image, 5)
-cv2.imshow('Median Blurring', median)
-cv2.waitKey(0)
+median = cv2.medianBlur(image, 5)<br>
+cv2.imshow('Median Blurring', median)<br>
+cv2.waitKey(0)<br>
 
-bilateral = cv2.bilateralFilter(image, 9, 75, 75)
-cv2.imshow('Bilateral Blurring', bilateral)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+bilateral = cv2.bilateralFilter(image, 9, 75, 75)<br>
+cv2.imshow('Bilateral Blurring', bilateral)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
 
 OUTPUT:
 ![Blur1](https://user-images.githubusercontent.com/98145104/176425864-30afa493-aafa-4aad-877d-adc4aedf783b.png)
@@ -362,63 +362,63 @@ OUTPUT:
 ![Blur4](https://user-images.githubusercontent.com/98145104/176425922-86ef55d4-c240-431e-acd6-81d5b1d7ab16.png)
 
 # 17.
-from PIL import Image
-from PIL import ImageEnhance
-image = Image.open('bird2.jpg')
-image.show()
+from PIL import Image<br>
+from PIL import ImageEnhance<br>
+image = Image.open('bird2.jpg')<br>
+image.show()<br>
 
-#Brightness
-enh_bri = ImageEnhance.Brightness(image)
-brightness = 1.5
-image_brightened = enh_bri.enhance(brightness)
-image_brightened.show()
+#Brightness<br>
+enh_bri = ImageEnhance.Brightness(image)<br>
+brightness = 1.5<br>
+image_brightened = enh_bri.enhance(brightness)<br>
+image_brightened.show()<br>
 
-#Color
-enh_col = ImageEnhance.Color(image)
-color = 1.5
-image_colored = enh_col.enhance(color)
-image_colored.show()
+#Color<br>
+enh_col = ImageEnhance.Color(image)<br>
+color = 1.5<br>
+image_colored = enh_col.enhance(color)<br>
+image_colored.show()<br>
 
-#Contrast
-enh_con = ImageEnhance.Contrast(image)
-contrast = 1.5
-image_contrasted = enh_con.enhance(contrast)
-image_contrasted.show()
+#Contrast<br>
+enh_con = ImageEnhance.Contrast(image)<br>
+contrast = 1.5<br>
+image_contrasted = enh_con.enhance(contrast)<br>
+image_contrasted.show()<br>
 
-#Sharpen
-enh_sha = ImageEnhance.Sharpness(image)
-sharpness = 1.5
-image_sharped = enh_sha.enhance(sharpness)
-image_sharped.show()
+#Sharpen<br>
+enh_sha = ImageEnhance.Sharpness(image)<br>
+sharpness = 1.5<br>
+image_sharped = enh_sha.enhance(sharpness)<br>
+image_sharped.show()<br>
 
 OUTPUT:
 ![IMGenhance](https://user-images.githubusercontent.com/98145104/176426602-d4218919-580a-4356-9e1b-c344564be4ba.png)
 ![IMG_enhance](https://user-images.githubusercontent.com/98145104/176426616-b5458d09-721d-4ab7-b036-09cf8c8e2a15.png)
 
 # 18.
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-from PIL import Image, ImageEnhance
-img = cv2.imread('tree.jpg',0)
-ax = plt.subplots(figsize=(20,10))
-kernel = np.ones((5,5), np.uint8)
-opening  = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel)
-closing  = cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)
-erosion  = cv2.erode(img,kernel,iterations = 1)
-dilation = cv2.dilate(img, kernel, iterations = 1)
-gradient = cv2.morphologyEx(img, cv2.MORPH_GRADIENT, kernel) 
-plt.subplot(151)
-plt.imshow(opening)
-plt.subplot(152)
-plt.imshow(closing)
-plt.subplot(153)
-plt.imshow(erosion)
-plt.subplot(154)
-plt.imshow(dilation)
-plt.subplot(155)
-plt.imshow(gradient)
-cv2.waitKey(0)
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+from PIL import Image, ImageEnhance<br>
+img = cv2.imread('tree.jpg',0)<br>
+ax = plt.subplots(figsize=(20,10))<br>
+kernel = np.ones((5,5), np.uint8)<br>
+opening  = cv2.morphologyEx(img, cv2.MORPH_OPEN, kernel)<br>
+closing  = cv2.morphologyEx(img, cv2.MORPH_CLOSE, kernel)<br>
+erosion  = cv2.erode(img,kernel,iterations = 1)<br>
+dilation = cv2.dilate(img, kernel, iterations = 1)<br>
+gradient = cv2.morphologyEx(img, cv2.MORPH_GRADIENT, kernel)<br>
+plt.subplot(151)<br>
+plt.imshow(opening)<br>
+plt.subplot(152)<br>
+plt.imshow(closing)<br>
+plt.subplot(153)<br>
+plt.imshow(erosion)<br>
+plt.subplot(154)<br>
+plt.imshow(dilation)<br>
+plt.subplot(155)<br>
+plt.imshow(gradient)<br>
+cv2.waitKey(0)<br>
 
 OUTPUT:
 ![Enhance2](https://user-images.githubusercontent.com/98145104/176427041-69e01e67-d77a-4374-8330-e80cee6865ce.png)
