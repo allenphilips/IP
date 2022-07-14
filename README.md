@@ -480,3 +480,29 @@ plt.show()
 
 OUTPUT:
 ![graylevl_wo_bg](https://user-images.githubusercontent.com/98145104/178706760-ae9fab0b-6a8d-4e61-ad37-3316f035ae5d.png)
+
+# 22.Program to analyze the image data using Histogram.
+
+//openCV
+import cv2
+import numpy as np
+img  = cv2.imread('man.jpg',0)
+hist = cv2.calcHist([img],[0],None,[256],[0,256])
+plt.hist(img.ravel(),256,[0,256])
+_ = plt.xlabel('Intensity Value')
+_ = plt.ylabel('Count') 
+plt.show()
+
+OUTPUT:
+![hist_openCV](https://user-images.githubusercontent.com/98145104/178967545-c87b0cb9-8890-4482-80e0-a51a4ec6e0a1.png)
+
+//skimage
+from skimage import io
+import matplotlib.pyplot as plt
+image = io.imread('man.jpg')
+ax = plt.hist(image.ravel(), bins = 256)
+_ = plt.xlabel('Intensity Value')
+_ = plt.ylabel('Count') 
+plt.show()
+
+OUTPUT:![hist_skimage](https://user-images.githubusercontent.com/98145104/178970126-cb3e6432-2115-46d2-b358-814754f7a0fe.png)
