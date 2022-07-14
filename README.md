@@ -483,26 +483,27 @@ OUTPUT:
 
 # 22.Program to analyze the image data using Histogram.
 
-//openCV
-import cv2
-import numpy as np
-img  = cv2.imread('man.jpg',0)
-hist = cv2.calcHist([img],[0],None,[256],[0,256])
-plt.hist(img.ravel(),256,[0,256])
-_ = plt.xlabel('Intensity Value')
-_ = plt.ylabel('Count') 
-plt.show()
+//openCV<br>
+import cv2<br>
+import numpy as np<br>
+img  = cv2.imread('man.jpg',0)<br>
+hist = cv2.calcHist([img],[0],None,[256],[0,256])<br>
+plt.hist(img.ravel(),256,[0,256])<br>
+_ = plt.xlabel('Intensity Value')<br>
+_ = plt.ylabel('Count') <br>
+plt.show()<br>
 
 OUTPUT:
 ![hist_openCV](https://user-images.githubusercontent.com/98145104/178967545-c87b0cb9-8890-4482-80e0-a51a4ec6e0a1.png)
 
-//skimage
-from skimage import io
-import matplotlib.pyplot as plt
-image = io.imread('man.jpg')
-ax = plt.hist(image.ravel(), bins = 256)
-_ = plt.xlabel('Intensity Value')
-_ = plt.ylabel('Count') 
-plt.show()
+//skimage<br>
+from skimage import io<br>
+import matplotlib.pyplot as plt<br>
+image = io.imread('man.jpg')<br>
+ax = plt.hist(image.ravel(), bins = 256)<br>
+_ = plt.xlabel('Intensity Value')<br>
+_ = plt.ylabel('Count') <br>
+plt.show()<br>
 
-OUTPUT:![hist_skimage](https://user-images.githubusercontent.com/98145104/178970126-cb3e6432-2115-46d2-b358-814754f7a0fe.png)
+OUTPUT:
+![hist_skimage](https://user-images.githubusercontent.com/98145104/178970126-cb3e6432-2115-46d2-b358-814754f7a0fe.png)
