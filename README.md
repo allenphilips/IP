@@ -424,59 +424,59 @@ OUTPUT:
 ![Enhance2](https://user-images.githubusercontent.com/98145104/176427041-69e01e67-d77a-4374-8330-e80cee6865ce.png)
 
 # 19.Program to<br>(i)Read the image, convert it into grayscale image<br>(ii)write (save) the grayscale image and(iii)<br>
-import cv2
-OriginalImg=cv2.imread('Chick.jpg')
-GrayImg=cv2.imread('Chick.jpg',0)
-isSaved=cv2.imwrite('D:/i.jpg', GrayImg)
-cv2.imshow('Display Original Image', OriginalImg)
-cv2.imshow('Display Grayscale Image',GrayImg)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
-if isSaved:
-    print('The image is succrssfully saved')
+import cv2<br>
+OriginalImg=cv2.imread('Chick.jpg')<br>
+GrayImg=cv2.imread('Chick.jpg',0)<br>
+isSaved=cv2.imwrite('D:/i.jpg', GrayImg)<br>
+cv2.imshow('Display Original Image', OriginalImg)<br>
+cv2.imshow('Display Grayscale Image',GrayImg)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+if isSaved:<br>
+    print('The image is succrssfully saved')<br>
     
 OUTPUT:
 ![chick_org](https://user-images.githubusercontent.com/98145104/178705096-61dce7f4-254f-472e-9bdd-42c696814328.png)
 ![chick_gray](https://user-images.githubusercontent.com/98145104/178705148-c0e05014-e757-4949-834a-ef14234dc08c.png)
 
 # 20.Program to perform Graylevel slicing with background.
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('man.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x): 
-    for j in range(0,y):
-        if(image[i][j]>50 and image[i][j]<150):
-            z[i][j]=255
-        else:
-            z[i][j]=image[i][j]
-equ=np.hstack((image,z))
-plt.title('Graylevel slicing with background')
-plt.imshow(equ,'gray')
-plt.show()
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('man.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x): <br>
+    for j in range(0,y):<br>
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+            z[i][j]=image[i][j]<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing with background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
 
 OUTPUT:
 ![graylevl_bg](https://user-images.githubusercontent.com/98145104/178705754-f6426bf8-96fd-4c94-974e-7539eb2b95a7.png)
 
 # 21.Program to perform Graylevel slicing without background.
-import cv2
-import numpy as np
-from matplotlib import pyplot as plt
-image=cv2.imread('man.jpg',0)
-x,y=image.shape
-z=np.zeros((x,y))
-for i in range(0,x):
-    for j in range(0,y):
-        if(image[i][j]>50 and image[i][j]<150):
-            z[i][j]=255
-        else:
-            z[i][j]=0
-equ=np.hstack((image,z))
-plt.title('Graylevel slicing without background')
-plt.imshow(equ,'gray')
-plt.show()
+import cv2<br>
+import numpy as np<br>
+from matplotlib import pyplot as plt<br>
+image=cv2.imread('man.jpg',0)<br>
+x,y=image.shape<br>
+z=np.zeros((x,y))<br>
+for i in range(0,x):<br>
+    for j in range(0,y):<br>
+        if(image[i][j]>50 and image[i][j]<150):<br>
+            z[i][j]=255<br>
+        else:<br>
+            z[i][j]=0<br>
+equ=np.hstack((image,z))<br>
+plt.title('Graylevel slicing without background')<br>
+plt.imshow(equ,'gray')<br>
+plt.show()<br>
 
 OUTPUT:
 ![graylevl_wo_bg](https://user-images.githubusercontent.com/98145104/178706760-ae9fab0b-6a8d-4e61-ad37-3316f035ae5d.png)
