@@ -570,3 +570,45 @@ plt.axis('off');
 
 OUTPUT:
 ![v_gamma](https://user-images.githubusercontent.com/98145104/179965672-6cde13f4-7c96-4b4a-b4fc-ed355bc86a53.png)
+
+# 24.Program to perform basic image manipulation:
+    a) Sharpness
+    b) Flipping
+    c) Cropping
+    
+    #Image Sharpen
+from PIL import Image
+from PIL import ImageFilter
+import matplotlib.pyplot as plt
+#Load the image
+my_image=Image.open('dog1.jpg')
+#Use sharpen function
+sharp=my_image.filter(ImageFilter.SHARPEN)
+#Save the image
+sharp.save('E:/image_sharpen.jpg')
+sharp.show()
+plt.imshow(sharp)
+plt.show()
+
+OUTPUT:
+![dog1](https://user-images.githubusercontent.com/98145104/179969841-ec422965-fc8f-4173-a943-a1654e6c5349.png)
+
+![E_dog](https://user-images.githubusercontent.com/98145104/179969933-4a0bff23-0c22-40e5-bfcb-93722d2674fe.png)
+
+#Image flip
+import matplotlib.pyplot as plt
+#Load the image
+img=Image.open('dog1.jpg')
+plt.imshow(img)
+plt.show()
+#use the flip function
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)
+#save the image
+flip.save('E:/image_flip.jpg')
+plt.imshow(flip)
+plt.show()
+
+OUTPUT:
+![E_dogg](https://user-images.githubusercontent.com/98145104/179970329-a24ccd04-452e-4bb1-a66f-9decded3766a.png)
+![dog_flip](https://user-images.githubusercontent.com/98145104/179970346-2439d12a-ab72-406f-b218-10fa19523fd9.png)
+
