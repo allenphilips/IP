@@ -139,7 +139,7 @@ cv2.waitKey(0)<br>
 imgresize=cv2.resize(img,(150,160))<br>
 cv2.imshow('Resized image',imgresize)<br>
 print('Length and Width of Resized image',imgresize.shape)<br>
-cv2.waitKey(0)
+cv2.waitKey(0)<br>
 
 OUTPUT:
 
@@ -513,102 +513,102 @@ OUTPUT:
     b) Log transformation
     c) Gamma correction
     
-%matplotlib inline
-import imageio
-import matplotlib.pyplot as plt
-#import warnings
-#import matplotlib.cbook
-#warnings.filterwarnings("ignore", category=matplotlib.cbook.mplDeprecation)
-pic=imageio.imread("violet.jpg")
-plt.figure(figsize=(6,6))
-plt.imshow(pic);
-plt.axis('off');
+%matplotlib inline<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
+#import warnings<br>
+#import matplotlib.cbook<br>
+#warnings.filterwarnings("ignore", category=matplotlib.cbook.mplDeprecation)<br>
+pic=imageio.imread("violet.jpg")<br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(pic);<br>
+plt.axis('off');<br>
 
 OUTPUT:
-![v_org](https://user-images.githubusercontent.com/98145104/179965458-81011338-3467-4462-bd14-f3fc3305ef4e.png)
+![v_org](https://user-images.githubusercontent.com/98145104/179965458-81011338-3467-4462-bd14-f3fc3305ef4e.png)<br>
 
-negative = 255 - pic 
-plt.figure(figsize=(6,6))
-plt.imshow(negative);
-plt.axis('off');
-
-OUTPUT:
-![v_neg](https://user-images.githubusercontent.com/98145104/179965536-f9c0992c-bba8-4b69-9442-81e3d0b46859.png)
-
-%matplotlib inline
-
-import cv2
-import numpy as np
-import matplotlib.pyplot as plt
-
-pic=cv2.imread('violet.jpg')
-gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])
-gray=gray(pic)
-
-max=np.max(gray)
-
-def logtransform():
-    return(255/np.log(1+max))*np.log(1+gray)
-plt.figure(figsize=(5,5))
-plt.imshow(logtransform(), cmap=plt.get_cmap(name='gray'))
-plt.axis('off');
-
-import imageio
-import matplotlib.pyplot as plt
+negative = 255 - pic <br>
+plt.figure(figsize=(6,6))<br>
+plt.imshow(negative);<br>
+plt.axis('off');<br>
 
 OUTPUT:
-![v_log](https://user-images.githubusercontent.com/98145104/179965644-5bd8e2fd-f59c-4466-a670-35ae5379b5dc.png)
+![v_neg](https://user-images.githubusercontent.com/98145104/179965536-f9c0992c-bba8-4b69-9442-81e3d0b46859.png)<br>
 
-# Gamma encoding
-pic=imageio.imread('violet.jpg')
-gamma=2.2 # Gamma < 1 = Dark; Gamma > 1 = Bright
+%matplotlib inline<br>
 
-gamma_correction = ((pic/255)**(1/gamma))
-plt.figure(figsize=(5,5))
-plt.imshow(gamma_correction)
-plt.axis('off');
+import cv2<br>
+import numpy as np<br>
+import matplotlib.pyplot as plt<br>
+
+pic=cv2.imread('violet.jpg')<br>
+gray=lambda rgb : np.dot(rgb[...,:3],[0.299,0.587,0.114])<br>
+gray=gray(pic)<br>
+
+max=np.max(gray)<br>
+
+def logtransform():<br>
+    return(255/np.log(1+max))*np.log(1+gray)<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(logtransform(), cmap=plt.get_cmap(name='gray'))<br>
+plt.axis('off');<br>
+
+import imageio<br>
+import matplotlib.pyplot as plt<br>
 
 OUTPUT:
-![v_gamma](https://user-images.githubusercontent.com/98145104/179965672-6cde13f4-7c96-4b4a-b4fc-ed355bc86a53.png)
+![v_log](https://user-images.githubusercontent.com/98145104/179965644-5bd8e2fd-f59c-4466-a670-35ae5379b5dc.png)<br>
 
-# 24.Program to perform basic image manipulation:
-    a) Sharpness
-    b) Flipping
-    c) Cropping
+# Gamma encoding<br>
+pic=imageio.imread('violet.jpg')<br>
+gamma=2.2 # Gamma < 1 = Dark; Gamma > 1 = Bright<br>
+
+gamma_correction = ((pic/255)**(1/gamma))<br>
+plt.figure(figsize=(5,5))<br>
+plt.imshow(gamma_correction)<br>
+plt.axis('off');<br>
+
+OUTPUT:
+![v_gamma](https://user-images.githubusercontent.com/98145104/179965672-6cde13f4-7c96-4b4a-b4fc-ed355bc86a53.png)<br>
+
+# 24.Program to perform basic image manipulation:<br>
+    a) Sharpness<br>
+    b) Flipping<br>
+    c) Cropping<br>
     
-    #Image Sharpen
-from PIL import Image
-from PIL import ImageFilter
-import matplotlib.pyplot as plt
-#Load the image
-my_image=Image.open('dog1.jpg')
-#Use sharpen function
-sharp=my_image.filter(ImageFilter.SHARPEN)
-#Save the image
-sharp.save('E:/image_sharpen.jpg')
-sharp.show()
-plt.imshow(sharp)
-plt.show()
+    #Image Sharpen<br>
+from PIL import Image<br>
+from PIL import ImageFilter<br>
+import matplotlib.pyplot as plt<br>
+#Load the image<br>
+my_image=Image.open('dog1.jpg')<br>
+#Use sharpen function<br>
+sharp=my_image.filter(ImageFilter.SHARPEN)<br>
+#Save the image<br>
+sharp.save('E:/image_sharpen.jpg')<br>
+sharp.show()<br>
+plt.imshow(sharp)<br>
+plt.show()<br>
 
 OUTPUT:
-![dog1](https://user-images.githubusercontent.com/98145104/179969841-ec422965-fc8f-4173-a943-a1654e6c5349.png)
+![dog1](https://user-images.githubusercontent.com/98145104/179969841-ec422965-fc8f-4173-a943-a1654e6c5349.png)<br>
 
-![E_dog](https://user-images.githubusercontent.com/98145104/179969933-4a0bff23-0c22-40e5-bfcb-93722d2674fe.png)
+![E_dog](https://user-images.githubusercontent.com/98145104/179969933-4a0bff23-0c22-40e5-bfcb-93722d2674fe.png)<br>
 
-#Image flip
-import matplotlib.pyplot as plt
-#Load the image
-img=Image.open('dog1.jpg')
-plt.imshow(img)
-plt.show()
-#use the flip function
-flip=img.transpose(Image.FLIP_LEFT_RIGHT)
-#save the image
-flip.save('E:/image_flip.jpg')
-plt.imshow(flip)
-plt.show()
+#Image flip<br>
+import matplotlib.pyplot as plt<br>
+#Load the image<br>
+img=Image.open('dog1.jpg')<br>
+plt.imshow(img)<br>
+plt.show()<br>
+#use the flip function<br>
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)<br>
+#save the image<br>
+flip.save('E:/image_flip.jpg')<br>
+plt.imshow(flip)<br>
+plt.show()<br>
 
 OUTPUT:
-![E_dogg](https://user-images.githubusercontent.com/98145104/179970329-a24ccd04-452e-4bb1-a66f-9decded3766a.png)
-![dog_flip](https://user-images.githubusercontent.com/98145104/179970346-2439d12a-ab72-406f-b218-10fa19523fd9.png)
+![E_dogg](https://user-images.githubusercontent.com/98145104/179970329-a24ccd04-452e-4bb1-a66f-9decded3766a.png)<br>
+![dog_flip](https://user-images.githubusercontent.com/98145104/179970346-2439d12a-ab72-406f-b218-10fa19523fd9.png)<br>
 
