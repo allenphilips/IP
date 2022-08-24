@@ -612,3 +612,16 @@ OUTPUT:
 ![E_dogg](https://user-images.githubusercontent.com/98145104/179970329-a24ccd04-452e-4bb1-a66f-9decded3766a.png)<br>
 ![dog_flip](https://user-images.githubusercontent.com/98145104/179970346-2439d12a-ab72-406f-b218-10fa19523fd9.png)<br>
 
+Image crop<br>
+#Importing Image class from <br>
+from PIL import Image<br>
+import matplotlib.pyplot as plt<br>
+im=Image.open('dog1.jpg')<br>
+width,height=im.size<br>
+im1=im.crop((280,100,800,600))<br>
+im1.show()<br>
+plt.imshow(im1)<br>
+plt.show()<br>
+
+OUTPUT:<br>
+![img_crop](https://user-images.githubusercontent.com/98145104/186378872-d9f0fb9c-b4f7-4a42-ac76-fe59a6f126f8.png)<br>
