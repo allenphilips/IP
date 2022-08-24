@@ -625,3 +625,51 @@ plt.show()<br>
 
 OUTPUT:<br>
 ![img_crop](https://user-images.githubusercontent.com/98145104/186378872-d9f0fb9c-b4f7-4a42-ac76-fe59a6f126f8.png)<br>
+
+# 25.Program to perform edge detection:<br>
+import cv2<br>
+<br>
+# Read the original image<br>
+img = cv2.imread('tower.jpg')<br>
+<br>
+# Display original image<br>
+cv2.imshow('Original', img)<br>
+cv2.waitKey(0)<br>
+<br>
+# Convert to graycsale<br>
+img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)<br>
+<br>
+# Blur the image for better edge detection<br>
+img_blur = cv2.GaussianBlur(img_gray, (3,3), 0)<br>
+ <br>
+# Sobel Edge Detection<br>
+sobelx = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=0, ksize=5) # Sobel Edge Detection on the X axis<br>
+sobely = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=0, dy=1, ksize=5) # Sobel Edge Detection on the Y axis<br>
+sobelxy = cv2.Sobel(src=img_blur, ddepth=cv2.CV_64F, dx=1, dy=1, ksize=5) # Combined X and Y Sobel Edge Detection<br>
+<br>
+# Display Sobel Edge Detection Images<br>
+cv2.imshow('Sobel X', sobelx)<br>
+cv2.waitKey(0)<br>
+cv2.imshow('Sobel Y', sobely)<br>
+cv2.waitKey(0)<br>
+cv2.imshow('Sobel X Y using Sobel() function', sobelxy)<br>
+cv2.waitKey(0)<br>
+<br>
+# Canny Edge Detection<br>
+edges = cv2.Canny(image=img_blur, threshold1=100, threshold2=200) # Canny Edge Detection<br>
+<br>
+# Display Canny Edge Detection Image<br>
+cv2.imshow('Canny Edge Detection', edges)<br>
+cv2.waitKey(0)<br>
+cv2.destroyAllWindows()<br>
+
+OUTPUT:
+![towerorg](https://user-images.githubusercontent.com/98145104/186385085-e719d163-885c-434b-8f10-090ca55c7fcd.png)
+
+![towersobelx](https://user-images.githubusercontent.com/98145104/186385160-209360ee-cb72-416c-b2a9-58dbc30e9c8a.png)
+
+![towersobely](https://user-images.githubusercontent.com/98145104/186385212-327625f5-03fe-4e09-af6a-02e0b2b08ad6.png)
+
+![sobelxy](https://user-images.githubusercontent.com/98145104/186385250-a477bba2-9e49-486f-82e9-33ac0c106352.png)
+
+![canny](https://user-images.githubusercontent.com/98145104/186385337-dbb4a2fc-d843-4d30-afd0-ebad40289303.png)
