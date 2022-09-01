@@ -553,13 +553,12 @@ plt.figure(figsize=(5,5))<br>
 plt.imshow(logtransform(), cmap=plt.get_cmap(name='gray'))<br>
 plt.axis('off');<br>
 
-import imageio<br>
-import matplotlib.pyplot as plt<br>
-
 OUTPUT:
 ![v_log](https://user-images.githubusercontent.com/98145104/179965644-5bd8e2fd-f59c-4466-a670-35ae5379b5dc.png)<br>
 
 # Gamma encoding<br>
+import imageio<br>
+import matplotlib.pyplot as plt<br>
 pic=imageio.imread('violet.jpg')<br>
 gamma=2.2 # Gamma < 1 = Dark; Gamma > 1 = Bright<br>
 
