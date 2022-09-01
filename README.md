@@ -662,14 +662,14 @@ import cv2<br>
 import numpy as np<br>
 from matplotlib import pyplot as plt<br>
 <br>
-# Loading image<br>
+#Loading image<br>
 #img0 = cv2.imread('SanFrancisco.jpg',) <br>
 img0 = cv2.imread('mario.jpg',)<br>
 <br>
 #converting to gray scale<br>
 gray = cv2.cvtColor(img0, cv2.COLOR_BGR2GRAY)<br>
 <br>
-# remove noise<br>
+#remove noise<br>
 img= cv2.GaussianBlur(gray,(3,3),0)<br>
 <br>
 #convolute with proper kernels<br>
