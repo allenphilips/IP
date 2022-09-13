@@ -1,0 +1,36 @@
+from PIL import Image
+from PIL import ImageFilter
+import matplotlib.pyplot as plt
+#Load the image
+my_image=Image.open('dog1.jpg')
+#Use sharpen function
+sharp=my_image.filter(ImageFilter.SHARPEN)
+#Save the image
+sharp.save('E:/image_sharpen.jpg')
+sharp.show()
+plt.imshow(sharp)
+plt.show()
+
+#Image flip
+import matplotlib.pyplot as plt
+#Load the image
+img=Image.open('dog1.jpg')
+plt.imshow(img)
+plt.show()
+#use the flip function
+flip=img.transpose(Image.FLIP_LEFT_RIGHT)
+#save the image
+flip.save('E:/image_flip.jpg')
+plt.imshow(flip)
+plt.show()
+
+Image crop
+#Importing Image class from
+from PIL import Image
+import matplotlib.pyplot as plt
+im=Image.open('dog1.jpg')
+width,height=im.size
+im1=im.crop((280,100,800,600))
+im1.show()
+plt.imshow(im1)
+plt.show()
