@@ -1,1 +1,29 @@
+from PIL import ImageColor
+#using getrgb for yellow
+img1=ImageColor.getrgb("yellow")
+print(img1)
+#using getrgb for red
+img2=ImageColor.getrgb("red")
+print(img2)
 
+pip install Scikit-Learn
+import skimage
+print(skimage.version)
+start:
+from skimage import io
+import matplotlib.pyplot as plt
+url='https://th.bing.com/th/id/OIP.qVuoApbCGfaPbNRSX8SmIwHaGA?w=213&h=180&c=7&r=0&o=5&pid=1.7.jpg'
+image=io.imread(url)
+plt.imshow(image)
+plt.show()
+
+import cv2 as c
+import numpy as np
+from PIL import Image
+array = np.zeros([100,200,3], dtype = np.uint8)
+array[:,:100] = [255,130,0]
+array[:,100:] = [0,0,255]
+img = Image.fromarray(array)
+img.save('image1.png')
+img.show()
+c.waitKey(0)
