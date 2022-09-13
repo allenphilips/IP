@@ -1,1 +1,49 @@
+import cv2
+import matplotlib.image as mping
+import matplotlib.pyplot as plt
+#Reading image files
+img1 = cv2.imread('Car.jpg')
+img2 = cv2.imread('Car1.jpg')
+#Applying Numpy addition on images
+fimg1 = img1 + img2
+plt.imshow(fimg1)
+plt.show()
+#Saving the output image
+cv2.imwrite('output.jpg', fimg1)
+fimg2 = img1 - img2
+plt.imshow(fimg2)
+plt.show()
+#Saving the output image
+cv2.imwrite('output.jpg', fimg2)
+fimg3 = img1 * img2
+plt.imshow(fimg3)
+plt.show()
+#Saving the output image
+cv2.imwrite('output.jpg', fimg3)
+fimg4 = img1 / img2
+plt.imshow(fimg4)
+plt.show()
+#Saving the output image
+cv2.imwrite('output.jpg', fimg4)
 
+import cv2
+import matplotlib.pyplot as plt
+image1=cv2.imread('bird1.jpg')
+image2=cv2.imread('bird1.jpg')
+ax=plt.subplots(figsize=(15,10))
+bitwiseAnd = cv2.bitwise_and(image1,image2)
+bitwiseOr = cv2.bitwise_or(image1,image2)
+bitwiseXor = cv2.bitwise_xor(image1,image2)
+bitwiseNot_img1 = cv2.bitwise_not(image1)
+bitwiseNot_img2 = cv2.bitwise_not(image2)
+plt.subplot(151)
+plt.imshow(bitwiseAnd)
+plt.subplot(152)
+plt.imshow(bitwiseOr)
+plt.subplot(153)
+plt.imshow(bitwiseXor)
+plt.subplot(154)
+plt.imshow(bitwiseNot_img1)
+plt.subplot(155)
+plt.imshow(bitwiseNot_img2)
+cv2.waitKey(0)
