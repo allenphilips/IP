@@ -1,0 +1,13 @@
+    (i) Resize      
+   (ii) Rotation
+ import cv2
+ img=cv2.imread('flower2.jpg')
+ print('Original image length width',img.shape)
+ cv2.imshow('Original image',img)
+ cv2.waitKey(0)
+
+ #to show the resized image
+  imgresize=cv2.resize(img,(150,160))
+  cv2.imshow('Resized Image',imgresize)
+  print('Resized image length width',imgresize.shape)
+  cv2.waitKey(0)
