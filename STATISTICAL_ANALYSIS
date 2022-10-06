@@ -1,0 +1,41 @@
+#Min
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+img=imageio.imread('zebra.jpg' )
+plt.imshow(img)
+plt.show()
+min_channels = np.amin([np.min(img[:,:,0]), np.amin(img[:,:,1]),np.amin(img[:,:,2])])
+print(min_channels)
+
+#Max
+import imageio
+import numpy as np
+import matplotlib.pyplot as plt
+img=imageio.imread('black.jpg' )
+plt.imshow(img)
+plt.show()
+max_channels = np.amax([np.amax(img[:,:,0]), np.amax(img[:,:,1]),np.amax(img[:,:,2])])
+print(max_channels)
+
+#average
+import imageio
+import matplotlib.pyplot as plt
+img=imageio.imread("cougar.jpg")
+plt.imshow(img)
+np.average(img)
+
+#standard deviation
+from PIL import Image,ImageStat
+import matplotlib.pyplot as plt
+im=Image.open('cougar.jpg')
+plt.imshow(im)
+plt.show()
+stat=ImageStat.Stat(im)
+print(stat.stddev)
+
+#Variance
+from PIL import Image, ImageStat
+im = Image.open('images.jpg')
+stat = ImageStat.Stat(im)
+print(stat.var)
