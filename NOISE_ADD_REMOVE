@@ -1,0 +1,54 @@
+#2.Noise
+#a.Adding Noise
+
+from skimage.util import random_noise
+
+fruit_image=plt.imread('fruitts.jpeg')
+                       
+#add noise to the image
+noisy_image=random_noise(fruit_image)
+                       
+#show the original and resulting image
+#plot_comparison(fruit_image,noisy_image,'Noisy image')
+
+plt.title('Original')
+plt.imshow(fruit_image)
+plt.show()
+plt.title('Noisy image')
+plt.imshow(noisy_image)
+plt.show()
+
+#b.Reducing noise
+
+from skimage.restoration import denoise_tv_chambolle
+
+noisy_image=plt.imread('noisy.jpg')
+                       
+#add total varation filter denoising
+denoised_image=denoise_tv_chambolle(noisy_image,multichannel=True)
+                       
+#show the noisy and denoised image
+#plot_comparison(noisy_image,denoised_image,'Denoised image')
+plt.title('Original')
+plt.imshow(noisy_image)
+plt.show()
+plt.title('Denoised image')
+plt.imshow(denoised_image)
+plt.show()
+
+#c.Reducing Noise While Preserving edges
+from skimage.restoration import denoise_bilateral
+
+landscape_image=plt.imread('noisy.jpg')
+                       
+#apply bilateral filter denoising
+denoised_image=denoise_bilateral(landscape_image,multichannel=True)
+                       
+#show the original and resulting images
+#plot_comparison(landscape_image,denoised_image,'Denoised image')
+plt.title('Original')
+plt.imshow(landscape_image)
+plt.show()
+plt.title('Denoised image')
+plt.imshow(denoised_image)
+plt.show()
