@@ -1,0 +1,27 @@
+#1.invert image
+invert=ImageChops.invert(greyscale)
+
+#2.invert by substraction
+bg=Image.new('L',(256,256),color=(255))#create a new image with a solid white background
+subt=ImageChops.subtract(bg,greyscale)#substract image from background
+
+#3.rotate
+rotate=subt.rotate(45)
+rotate
+
+#gaussian blur
+blur=greyscale.filter(ImageFilter.GaussianBlur(radius=1))
+
+#edge detection
+edge=blur.filter (ImageFilter.FIND_EDGES)
+edge
+
+#Change edge colours
+edge=edge.convert('RGB')
+bg_red=Image.new('RGB',(256,256),color=(255,0,0))
+
+filled_edge=ImageChops.darker(bg_red,edge)
+filled_edge
+
+#save image in the directory
+edge.save('processed.png')
